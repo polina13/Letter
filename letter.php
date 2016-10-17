@@ -1,5 +1,7 @@
 <?php
-    $friend_name = "Max";
+    $friend_name = $_GET["recipient"];
+    /*The code $_GET["recipient"] will give us the value of the <input> field with the name attribute set to "recipient"*/
+    $my_name = $_GET["sender"];
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +16,6 @@
     <p><?php echo $friend_name; ?>, you would not believe how cold it is here. I should have gone to Hawaii instead. But I like programming a lot, so I've got that going for me.</p>
     <p>Looking forward to seeing you soon. I'll bring you back a souvenir.</p>
     <p>Cheers,</p>
-    <p>Diane</p>
+    <p><?php echo $my_name; ?></p>
 </body>
 </html>
